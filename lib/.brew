@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Install command-line tools using Homebrew.
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install brew-cask
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+
+# gcc
+brew install gcc
+
+# Install jq
+brew install jq
+
+# Protobuf
+brew install protobuff
+
+# mac os cmd last versions
+brew install grep
+brew install openssh
+brew install screen
+
+# install langs
+brew install golang
+brew install python3.6
+brew install ocaml
+brew install lua
+#brew install python2.7
+brew install ruby
+brew install node
+#brew install julia
+#brew install lisp
+
+# docker utils
+brew install docker
+brew install docker-machine
+
+# cmake
+brew install cmake
+
+# databases
+#brew install memcached
+#brew install mongodb
+brew install mysql
+#brew install postgresql
+#brew install postgis
+brew install redis
+#brew install sqlite
+
+# clean up out dated versions
+brew cleanup
