@@ -1,0 +1,17 @@
+#!/bin/bash
+
+target="$1"
+
+
+function get_github_api_url () {
+    #
+    target="$1"
+    url=$(cat $DOTFILES/git/github_api.json | jq -r .$1)
+    echo $url
+}
+
+if [ ! -z "$target" ]; then
+    get_url $target
+fi
+
+$@

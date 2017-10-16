@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -x "$(command -v fagit)" ]; then
+    alias get='fagit'
+fi

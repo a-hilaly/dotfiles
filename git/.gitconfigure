@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+username = $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.user)
+mail = $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.mail)
+editor= $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.editor)
+
+echo "Reconfiguration git config --global using .github_api.json"
+echo "... $username / $mail / $editor"
+
+git config --global user.name "$username"
+git config --global user.email $mail
+git config --global core.editor $editor
