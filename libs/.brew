@@ -8,7 +8,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install brew-cask
 
@@ -21,6 +20,9 @@ brew install moreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+
+# dd
+brew install ddrescue
 
 # gcc
 brew install gcc
@@ -38,12 +40,17 @@ brew install screen
 
 # install langs
 brew install golang
-brew install python3.6
+brew install python3
 brew install ocaml
 brew install lua
-#brew install python2.7
+#brew install python
 brew install ruby
 brew install node
+brew install ghc
+brew install clisp
+#brew install elixir
+#brew install erlang
+#brew install autoconf
 #brew install julia
 #brew install lisp
 
@@ -62,6 +69,14 @@ brew install mysql
 #brew install postgis
 brew install redis
 #brew install sqlite
+
+#apache
+
+# brew install tomcat
+# brew install httpd
+
+# others
+brew install spotify
 
 # clean up out dated versions
 brew cleanup
