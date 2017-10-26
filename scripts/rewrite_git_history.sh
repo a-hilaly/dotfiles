@@ -1,5 +1,6 @@
-#!/bin/sh
+#!/bin/shell
 
+#NOTE: Do not execute this script directly
 
 git filter-branch --env-filter '
 OLD_NAME=""
@@ -16,6 +17,7 @@ then
     export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
+
 
 
 git filter-branch --env-filter '
