@@ -1,0 +1,25 @@
+#!/bin/bash
+
+_cjc="Content-Type: application/json"
+
+# --json-post
+# --json-get
+# --json-delete
+function gocurl () {
+    mode="$1"
+    adress="$2"
+    if [ "$mode" = "--json-post" ] || [ "$mode" = "JP" ]; then
+        #post
+        curl -X post $adress -H "$_cjc" -d ${@:3}
+    elif [ "$mode" = "--json-get" ] || [ "$mode" = "JG" ]; then
+        #get
+        curl -X get $adress -H "$_cjc" -d ${@:3}
+    elif [ "$mode" = "--json-delete" ] || [ "$mode" = "JD" ]; then
+        #delete
+        curl -X delete $adress -H "$_cjc" -d ${@:3}
+    else
+        curl $2 ${@:3}
+    fi
+}
+
+$@
