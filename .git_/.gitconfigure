@@ -1,13 +1,28 @@
 #!/bin/bash
 
+source $DOTFILES/.utils/json_utils import extract_from_json
 
-username = $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.user)
-mail = $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.mail)
-editor= $(cat $DOTFILES/git/github_api.json | jq -r .__logins__.editor)
 
-echo "Reconfiguration git config --global using .github_api.json"
-echo "... $username / $mail / $editor"
+function configure_git_credentials () {
+    # Configure Git Credentials
+    username = $(extract_from_json $DOTFILESSETTINGS .git.user)
+    mail = $(extract_from_json $DOTFILESSETTINGS .git.mail)
+    editor= $(extract_from_json $DOTFILESSETTINGS .git.editor)
 
-git config --global user.name "$username"
-git config --global user.email $mail
-git config --global core.editor $editor
+    echo "Reconfiguration git config --global using $DOTFILESSETTINGS"
+
+    if [ ! "$username" = "" ]; then
+        git config --global user.name "$username"
+        echo "User name configured ($username)"
+    fi
+    if [ ! "$mail" = "" ]; then
+        git config --global user.mail "$mail"
+        echo "User mail configured ($mail)"
+
+    fi
+    if [ ! "$editor" = "" ]; then
+        git config --global core.editor $editor
+        echo "Git editor configured ($editor)"
+    fi
+
+}
