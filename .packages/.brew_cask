@@ -1,9 +1,10 @@
 #!/bin/bash
 
-
+# langs
 brew cask install java
 brew cask install julia
 brew cask install slack
+
 
 # jetstorm
 brew cask install intellij
@@ -16,9 +17,9 @@ brew cask install slack
 brew cask install etcher
 brew cask install docker
 
-# github
+# workspace
 brew cask install gitter
-brew cask install github-desktop
+brew cask install keybase
 
 # editor
 brew cask install atom
