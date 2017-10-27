@@ -20,7 +20,7 @@ NUCLEUS_HISTORY="$NUCLEUS/.nucleus_history"
 NUCLEUS_LOGS="$NUCLEUS/.logs"
 MACHINE_LOGS="$NUCLEUS/.machine_logs"
 
-#NOTE:
+#NOTE: OK
 
 function make_nucleus () {
     if [ -d $NUCLEUS ]; then

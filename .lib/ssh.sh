@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# DOTFILES | DOTFILESMACHINES | DOTFILESKEYS
+
+source $DOTFILES/.lib/json
+
+function local_ssh () {
+    user="$1"
+    adress="$2"
+    sentence="$user@$adress"
+    ssh "$sentence"
+}
+
+function aws_ssh () {
+    # Europ central connection
+    user="$1"
+    adress="$user@$2.eu-central-1.compute.amazonaws.com"
+    echo "$adress"
+    pem_key_regex_dir="$3"
+    echo "pem $pem_key_regex_dir"
+    ssh -i "$pem_key_regex_dir" "$adress"
+}
+
+function gossh () {
+    opt="$1"
+    if [ "$opt" = "--local" ]; then
+        local_ssh "${@:2}"
+    elif [ "$opt" = "--aws" ]; then
+        aws_ssh "${@:2}"
+    elif [ "$opt" = "--known" ]; then
+        machine="$2"
+        _type=$(extract_from_json $DF_MACHINES .$machine.type)
+        user=$(extract_from_json $DF_MACHINES .$machine.user)
+        adress=$(extract_from_json $DF_MACHINES .$machine.adress)
+        pem_key=$(extract_from_json $DF_MACHINES .$machine.pem_key)
+        if [ "$_type" = "aws" ]; then
+            aws_ssh "$user" "$adress" "$DOTFILESKEYS/$pem_key"
+        elif [ "$_type" = "local" ]; then
+            local_ssh $user $adress
+        fi
+    else
+        ssh $@
+    fi
+}
+
+
+$@

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# langs
+brew cask install java
+brew cask install julia
+brew cask install slack
+
+# jetstorm
+brew cask install intellij
+brew cask install rider
+brew cask install datagrip
+brew cask install webstorm
+brew cask install slack
+
+# system writer
+brew cask install etcher
+brew cask install docker
+
+# workspace
+brew cask install gitter
+brew cask install keybase
+brew cask install lumen
+
+# editor
+brew cask install atom
+brew cask isntall google-chrome

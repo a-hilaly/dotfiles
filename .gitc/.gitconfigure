@@ -1,0 +1,28 @@
+#!/bin/bash
+
+source $DOTFILES/.lib/.json
+
+
+function configure_git_credentials () {
+    # Configure Git Credentials
+    username = $(extract_from_json $DL_CREDENTIALS .git.user)
+    mail = $(extract_from_json $DL_CREDENTIALS .git.mail)
+    editor= $(extract_from_json $DL_CREDENTIALS .git.editor)
+
+    echo "Reconfiguration git config --global using $DL_CREDENTIALS"
+
+    if [ ! "$username" = "" ]; then
+        git config --global user.name "$username"
+        echo "User name configured ($username)"
+    fi
+    if [ ! "$mail" = "" ]; then
+        git config --global user.mail "$mail"
+        echo "User mail configured ($mail)"
+
+    fi
+    if [ ! "$editor" = "" ]; then
+        git config --global core.editor $editor
+        echo "Git editor configured ($editor)"
+    fi
+
+}

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
 export DOTFILES="$HOME/Github/dotfiles"
 export DF_SETTINGS="$DOTFILES/.settings"
 export DF_CREDENTIALS="$DF_SETTINGS/credentials.json"

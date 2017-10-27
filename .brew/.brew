@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# Install command-line tools using Homebrew.
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install brew-cask
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+
+brew install gnu-sed --with-default-names
+
+# Install bash
+brew install bash
+#brew install bash-completion2
+
+# Switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
+
+
+# Install `wget` with IRI support.
+brew install wget --with-iri
+
+
+# Install more recent versions of some macOS tools.
+brew install vim --with-override-system-vi
+brew install grep
+brew install openssh
+brew install screen
+brew install homebrew/php/php56 --with-gmp
+
+
+# dd
+brew install ddrescue
+
+# gcc
+brew install gcc
+
+# Install jq
+brew install jq
+
+# Protobuf
+brew install protobuff
+
+# mac os cmd last versions
+brew install grep
+brew install openssh
+brew install screen
+
+# install langs
+brew install golang
+brew install python3
+brew install ocaml
+brew install lua
+#brew install python
+brew install ruby
+brew install node
+brew install ghc
+brew install clisp
+#brew install elixir
+#brew install erlang
+#brew install autoconf
+#brew install julia
+#brew install lisp
+
+brew install nvm
+brew install rvm
+
+# docker utils
+brew install docker
+brew install docker-machine
+
+# cmake
+brew install cmake
+
+# databases
+#brew install memcached
+#brew install mongodb
+brew install mysql
+#brew install postgresql
+#brew install postgis
+brew install redis
+#brew install sqlite
+
+#apache
+
+# brew install tomcat
+# brew install httpd
+
+# others
+#brew install spotify
+
+brew install tmux-mem-cpu-load
+brew install wifi-password
+brew install m-cli #SWESS ARMEEEE
+
+# clean up out dated versions
+brew cleanup
