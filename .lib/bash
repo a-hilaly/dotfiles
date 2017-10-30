@@ -18,7 +18,3 @@ function change_default_bash () {
         fi;
     fi
 }
-
-function install_bash () {
-    #
-}
