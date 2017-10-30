@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+function hasht () {
+    opt="$1"
+    if [ "$opt" = "--md5" ]; then
+        md5 -s $2
+    else
+        echo "Not implemented"
+    fi
+}
