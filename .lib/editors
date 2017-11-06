@@ -14,9 +14,8 @@ function v() {
 
 
 # Atom
-function atom () {
+function goatom () {
     # atom fast cmd line
-
     if [ $# -eq 0 ]; then
         atom .
     else
