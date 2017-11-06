@@ -21,6 +21,8 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
+brew install libtool
+
 brew install gnu-sed --with-default-names
 
 # Install bash
@@ -81,6 +83,7 @@ brew install clisp
 
 brew install nvm
 brew install rvm
+brew install carthage
 
 # docker utils
 brew install docker
@@ -109,6 +112,7 @@ brew install redis
 brew install tmux-mem-cpu-load
 brew install wifi-password
 brew install m-cli #SWESS ARMEEEE
+brew install collectd
 
 # clean up out dated versions
 brew cleanup

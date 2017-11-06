@@ -24,3 +24,10 @@ brew cask install lumen
 # editor
 brew cask install atom
 brew cask isntall google-chrome
+
+# menu bar cpu/gpu
+brew cask install istat-menus
+
+# Github apps
+brew cask install github
+brew cask install github-beta
