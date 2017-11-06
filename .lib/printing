@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # UTF-8-encode a string of Unicode symbols
 function escape() {
 	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u);

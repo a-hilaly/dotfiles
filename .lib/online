@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Saved in ~/online-check.sh and in a cron job as:
 # * * * * * ~/online-check.sh
 

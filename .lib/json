@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 function extract_from_json () {
     f="$1"
     cat $f | jq -r "${@:2}"
