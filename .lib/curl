@@ -6,9 +6,12 @@ _cjc="Content-Type: application/json"
 # --json-get
 # --json-delete
 
+function jcurl () {
+    echo "Not Implemented"
+}
+
 function gocurl () {
     # New curl to support fast JSON requests
-
     mode="$1"
     adress="$2"
     if [ "$mode" = "--json-post" ] || [ "$mode" = "JP" ]; then

@@ -1,19 +1,22 @@
 #!/bin/bash
 
+alias _mysql='/usr/local/mysql/bin/mysql'
 
-source $DOTFILES/.lib/json
+_default_mysql=".known-databases.mysql"
 
-alias mysql='/usr/local/mysql/bin/mysql'
-
-mysql_du=$(extract_from_json $DF_DATABASES .mysql.user)
-mysql_dh=$(extract_from_json $DF_DATABASES .mysql.host)
-mysql_dp=$(extract_from_json $DF_DATABASES .mysql.port)
-mysql_dpw=$(extract_from_json $DF_DATABASES .mysql.password)
+mysql_du=$(extract_from_json $DOTFILES_CONFIGURATIONS "$_default_mysql.user")
+mysql_dh=$(extract_from_json $DOTFILES_CONFIGURATIONS "$_default_mysql.host")
+mysql_dp=$(extract_from_json $DOTFILES_CONFIGURATIONS "$_default_mysql.port")
+mysql_dpw=$(extract_from_json $DOTFILES_CONFIGURATIONS "$_default_mysql.password")
 
 # Default mysql connection
-function gomysql () {
-    echo "$mysql_dh $mysql_du $mysql_dpw"
-    mysql -h $mysql_dh -u $mysql_du "-p$mysql_dpw"
+function mysql () {
+    opt="$1"
+    if [ "$opt" = "o" ]; then
+        _mysql -h $mysql_dh -u $mysql_du "-p$mysql_dpw"
+    else
+        _mysql $@
+    fi
 }
 
 $@

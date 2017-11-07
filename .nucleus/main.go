@@ -18,24 +18,43 @@ type NLS_settings struct {
     kind string
     name string
     cmd []string
-    db_cred [string] // "{db}:host:port:user:pw"
-                     // ""
+    db_cred []string // {db_system, host, port, user, pw}
 }
 
-NLS_BIN = NLS_settings{kind: "dir",
-                       name: "bin"}
-NLS_VENV = NLS_settings{kind: "cmd",
-                        name: "venv",
-                        cmd: "cd $NUCLEUS && goenv nvenv"}
-NLS_CACHE = NLS_settings{kind: "dir",
-                         name: "cache"}
-NLS_DATA = NLS_settings{kind: "dir",
-                        name: "data"}
-NLS_HISTORY = NLS_settings{kind: "file",
-                           name: "history"}
-NLS_DB = NLS_settings{kind: "db",
-                      name: "Nucleus_DB",
-                      db_cred: "mysql:localhost:3306:root:uehMLMRw"}
+var NLS_BIN = NLS_settings{
+    kind: "dir",
+    name: "bin",
+}
+var NLS_VENV = NLS_settings{
+    kind: "cmd",
+    name: "venv",
+    cmd: []string {"cd $NUCLEUS && goenv nvenv"},
+}
+var NLS_CACHE = NLS_settings{
+    kind: "dir",
+    name: "cache",
+}
+var NLS_DATA = NLS_settings{
+    kind: "dir",
+    name: "data",
+}
+var NLS_HISTORY = NLS_settings{
+    kind: "file",
+    name: "history",
+}
+var NLS_DB = NLS_settings{
+    kind: "db",
+    name: "Nucleus_DB",
+    db_cred: []string {"mysql", "localhost", "3306", "root", "uehMLMRw"},
+}
+var NLS_BUILD_SETTINGS = []NLS_settings {
+    NLS_BIN,
+    NLS_VENV,
+    NLS_CACHE,
+    NLS_DATA,
+    NLS_HISTORY,
+    NLS_DB,
+}
 
 func isError(err error) bool {
 	if err != nil {

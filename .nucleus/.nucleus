@@ -31,12 +31,6 @@ function make_nucleus () {
     fi
 }
 
-function make_nucleus_bin () {
-    mkdir $NUCLEUS_BIN
-    mkdir $NUCLEUS_DATA
-    goenv $NUCLEUS_VENV
-}
-
-function nucleusenv () {
+function nucleus_env () {
     source $NUCLEUS_VENV/bin/activate
 }
