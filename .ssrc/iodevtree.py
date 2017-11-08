@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-ioreg_smart_battery = "ioreg -p IODeviceTree"
+ioreg_dev_tree = "ioreg -p IODeviceTree"
 
 cbts = lambda x : x.decode('utf-8')
 
@@ -19,6 +19,6 @@ def _spcc(cmd):
     return _cbtr(stdout), _cbtr(stderr), p.returncode
 
 if __name__ == "__main__":
-    data, _, _ = _spcc(ioreg_smart_battery)
+    data, _, _ = _spcc(ioreg_dev_tree)
     for d in data:
         print(d)

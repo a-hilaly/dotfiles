@@ -23,7 +23,8 @@ targets = ['FullyRecharged',
            'AvgTimeToFull',
            'AvgTimeToEmpty',
            'TimeRemaining',
-           'CycleCount']
+           'CycleCount',
+           'Temperature']
 
 if __name__ == "__main__":
     data, _, _ = _spcc(ioreg_smart_battery)
