@@ -1,6 +1,7 @@
 {
     "istat-menus" : {
         "config_file" : "iStatMenusSettings.imsp",
+        "dead" : true
     },
     "nucleus" : {
         "component-tree" : {
