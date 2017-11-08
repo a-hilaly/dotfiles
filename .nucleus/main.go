@@ -10,6 +10,7 @@ import (
 // Configuration essential paths
 
 var CONFIG_PATH = "/Users/ial-ah/Github/dotfiles/df.configs"
+var CREDCONFIG_PATH = "/Users/ial-ah/Github/dotfiles/cred.config.json"
 
 // Setup settings vars
 
@@ -19,6 +20,10 @@ var SET_CACHE = false
 var SET_DATA = false
 var SET_HISTORY = false
 var SET_DB = false
+
+type NLS interface {
+    LoadConfigurations()
+}
 
 type NLS_settings struct {
     kind string
@@ -32,9 +37,9 @@ var NLS_BIN = NLS_settings{
     id: "bin",
 }
 var NLS_VENV = NLS_settings{
-    kind: "cmd",
+    kind: "cdir",
     id: "venv",
-    extra: []string {"cd $NUCLEUS && goenv nvenv"},
+    extra: []string {"cd $NUCLEUS && goenv nlsenv"},
 }
 var NLS_CACHE = NLS_settings{
     kind: "dir",
@@ -106,8 +111,9 @@ func ExecOsCmds() bool {
     return true
 }
 
-func ParseNucleusConfiguration(keys ...string) (value string, status bool) {
-    f := ReadJsonFile(CONFIG_PATH + "/df.config.json")
+func ParseNucleusConfiguration(cfn string, keys ...string) (value string, status bool) {
+    f := ReadJsonFile(CONFIG_PATH + "/" + cfn)
+    //fmt.Println("f:", f)
     dt := []byte(f)
     value = ""
     status = false
@@ -134,7 +140,7 @@ func ParseNucleusConfiguration(keys ...string) (value string, status bool) {
 func NucleusConfigurationDataSerie(targets []string, keys_wl ...string) []string {
     a := ""
     if len(targets) == 0 {
-        a, _ = ParseNucleusConfiguration(keys_wl...)
+        a, _ = ParseNucleusConfiguration("df.config.json", keys_wl...)
         return []string{a}
     }
     nl := make([]string, len(keys_wl)+1)
@@ -143,7 +149,7 @@ func NucleusConfigurationDataSerie(targets []string, keys_wl ...string) []string
     for index, elem := range targets {
         nl = keys_wl
         nl = append(nl, elem)
-        f, _ := ParseNucleusConfiguration(nl...)
+        f, _ := ParseNucleusConfiguration("df.config.json", nl...)
         res[index] = f
     }
     return res
@@ -151,8 +157,15 @@ func NucleusConfigurationDataSerie(targets []string, keys_wl ...string) []string
 
 func (nlss *NLS_settings) LoadConfigurations() {
     emptyl := []string{}
+    //db_targets := []string{"system", "host", "port", "user", "password"}
+    //default_db := false
     if nlss.kind == "dir" || nlss.kind == "file" {
         nlss.name = NucleusConfigurationDataSerie(emptyl, "component-tree", nlss.id)[0]
+    } else if nlss.kind == "cdir" {
+        //
+    } else if nlss.kind == "db" {
+        //db_targets := []string{"system", "host", "port", "user", "password"}
+        //default_db = ParseNucleusConfiguration()
     }
 }
 
@@ -281,6 +294,8 @@ func main() {
     //for _, k := range a {
     //    fmt.Print(k+"-\n")
     //}
-    fmt.Println(NLS_VENV)
+    fmt.Println(NLS_BIN)
+    NLS_BIN.LoadConfigurations()
+    fmt.Println(NLS_BIN)
 
 }
