@@ -20,10 +20,12 @@ brew cask install docker
 brew cask install gitter
 brew cask install keybase
 brew cask install lumen
+brew cask install spotify
+brew cask install spotify-notifications
 
 # editor
 brew cask install atom
-brew cask isntall google-chrome
+brew cask install google-chrome
 
 # menu bar cpu/gpu
 brew cask install istat-menus
