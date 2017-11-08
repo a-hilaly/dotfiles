@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+function _sys () {
+    uname
+}
+
+function macCompatibility () {
+    if [ "$uname" == "Darwin"]; then
+        echo "OK"
+        exit 0
+    else
+        echo "Most of this package is only macOS compatible this will exit soon"
+        exit 1
+    fi
+}
+
+$@
