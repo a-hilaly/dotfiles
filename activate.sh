@@ -1,13 +1,14 @@
 #!/bin/bash
 
 export DOTFILES="$HOME/Github/dotfiles"
-export DOTFILES_CONFIGURATIONS="$DOTFILES/df.config"
+export DOTFILES_CONFIGURATIONS="$DOTFILES/df.configs"
+export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 export NUCLEUS="$HOME/Nucleus"
 
 
 function source_lib () {
     d="$1"
-    for f in $DOTFILES/.lib/*
+    for f in $DOTFILES/.src/*
     do
         if [ -f "$f" ]; then
             echo "[INFO] ... Sourcing $f"
