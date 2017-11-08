@@ -6,11 +6,9 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-
 # Determine size of a file or total size of a directory
 function fs() {
     # file/dir size
-
 	if du -b /dev/null > /dev/null 2>&1; then
 		local arg=-sbh;
 	else
@@ -23,19 +21,16 @@ function fs() {
 	fi;
 }
 
-
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
     # Open
-
 	if [ $# -eq 0 ]; then
 		open .;
 	else
 		open "$@";
 	fi;
 }
-
 
 # Create a data URL from a file
 function dataurl() {

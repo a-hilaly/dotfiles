@@ -1,19 +1,19 @@
 #!/bin/bash
 
-function gofind () {
+function find () {
     opt="$1"
     f="$2"
     dir="$3"
     if [ "$opt" = "--home" ] || [ "$opt" = "home" ]; then
-        find "$HOME" -name "$f"
+        sudo find "$HOME" -name "$f"
     elif [ "$opt" = "--here" ] || [ "$opt" = "here" ]; then
-        find "$PWD" -name "$f"
+        sudo find "$PWD" -name "$f"
     elif [ "$opt" = "--github" ] || [ "$opt" = "github" ]; then
-        find "$HOME/Github" -name $f
+        sudo find "$HOME/Github" -name $f
     elif [ "$opt" = "--all" ] || [ "$opt" = "all" ]; then
-        find / -name "$f"
+        sudo find / -name "$f"
     else
-        find "$dir" -name "$f"
+        sudo find "$opt" -name "$f"
     fi
 }
 
