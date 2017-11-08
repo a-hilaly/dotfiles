@@ -3,7 +3,13 @@ package main
 import (
     "fmt"
     "os"
+    "io/ioutil"
+    "github.com/buger/jsonparser"
 )
+
+// Configuration essential paths
+
+var CONFIG_PATH = "/Users/ial-ah/Github/dotfiles/df.configs"
 
 // Setup settings vars
 
@@ -16,38 +22,38 @@ var SET_DB = false
 
 type NLS_settings struct {
     kind string
+    id string
     name string
-    cmd []string
-    db_cred []string // {db_system, host, port, user, pw}
+    extra []string // {db_system, host, port, user, pw}
 }
 
 var NLS_BIN = NLS_settings{
     kind: "dir",
-    name: "bin",
+    id: "bin",
 }
 var NLS_VENV = NLS_settings{
     kind: "cmd",
-    name: "venv",
-    cmd: []string {"cd $NUCLEUS && goenv nvenv"},
+    id: "venv",
+    extra: []string {"cd $NUCLEUS && goenv nvenv"},
 }
 var NLS_CACHE = NLS_settings{
     kind: "dir",
-    name: "cache",
+    id: "cache",
 }
 var NLS_DATA = NLS_settings{
     kind: "dir",
-    name: "data",
+    id: "data",
 }
 var NLS_HISTORY = NLS_settings{
     kind: "file",
-    name: "history",
+    id: "history",
 }
 var NLS_DB = NLS_settings{
     kind: "db",
-    name: "Nucleus_DB",
-    db_cred: []string {"mysql", "localhost", "3306", "root", "uehMLMRw"},
+    id: "database",
+    extra: []string {"mysql", "localhost", "3306", "root", "uehMLMRw"},
 }
-var NLS_BUILD_SETTINGS = []NLS_settings {
+var NLS_BUILD_SETTINGS = []NLS_settings{
     NLS_BIN,
     NLS_VENV,
     NLS_CACHE,
@@ -90,8 +96,69 @@ func CreateFile(path string) (status bool) {
     return false
 }
 
-func ExecOsCmds() {
+func ReadJsonFile(path string) (data string) {
+    dat, err := ioutil.ReadFile(path)
+    isError(err)
+    return string(dat)
+}
 
+func ExecOsCmds() bool {
+    return true
+}
+
+func ParseNucleusConfiguration(keys ...string) (value string, status bool) {
+    f := ReadJsonFile(CONFIG_PATH + "/df.config.json")
+    dt := []byte(f)
+    value = ""
+    status = false
+    if len(keys) > 3 || len(keys) < 1{
+        return value, status
+    } else {
+        if len(keys) == 1 {
+            value, _, _, _ := jsonparser.Get(dt, "nucleus", keys[0])
+            status = true
+            return string(value), status
+        } else if len(keys) == 2 {
+            value, _, _, _ := jsonparser.Get(dt, "nucleus", keys[0], keys[1])
+            status = true
+            return string(value), status
+        } else if len(keys) == 3 {
+            value, _, _, _ := jsonparser.Get(dt, "nucleus", keys[0], keys[1], keys[2])
+            status = true
+            return string(value), status
+        }
+    }
+    return string(value), status
+}
+
+func NucleusConfigurationDataSerie(targets []string, keys_wl ...string) []string {
+    a := ""
+    if len(targets) == 0 {
+        a, _ = ParseNucleusConfiguration(keys_wl...)
+        return []string{a}
+    }
+    nl := make([]string, len(keys_wl)+1)
+    res := make([]string, len(targets)) // initialize a list with full 0
+    // caused double trouble previously. take care here
+    for index, elem := range targets {
+        nl = keys_wl
+        nl = append(nl, elem)
+        f, _ := ParseNucleusConfiguration(nl...)
+        res[index] = f
+    }
+    return res
+}
+
+func (nlss *NLS_settings) LoadConfigurations() {
+    emptyl := []string{}
+    if nlss.kind == "dir" || nlss.kind == "file" {
+        nlss.name = NucleusConfigurationDataSerie(emptyl, "component-tree", nlss.id)[0]
+    }
+}
+
+type DotfilesEnv interface {
+    Check() bool
+    initialize() bool
 }
 
 type Dotfiles struct {
@@ -116,6 +183,14 @@ func (df *Dotfiles) initialize() bool {
     } else {
         return false
     }
+}
+
+type NucleusEnv interface {
+    intialize() bool
+    ShowConfiguration()
+    MakeNucleusDirRoot()
+    MakeSettings(directory bool, file bool, command bool, entry ...string)
+    SetupNucleus()
 }
 
 type Nucleus struct {
@@ -197,5 +272,15 @@ func SetupNucleus() bool {
 }
 
 func main() {
-    fmt.Println(SetupNucleus())
+    //fmt.Println(SetupNucleus())
+    //d, _ := ParseNucleusConfiguration("db-credentials", "config")
+    //fmt.Println(d)
+    //c := []string{"bin", "venv", "data"}
+    //a := NucleusConfigurationDataSerie(c, "component-tree")
+    //fmt.Println(len(a))
+    //for _, k := range a {
+    //    fmt.Print(k+"-\n")
+    //}
+    fmt.Println(NLS_VENV)
+
 }

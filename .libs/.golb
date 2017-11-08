@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# json utils
+go get -u github.com/antonholmquist/jason
+go get -u github.com/buger/jsonparser
