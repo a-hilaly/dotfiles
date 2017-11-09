@@ -3,25 +3,6 @@
 
 NUCLEUS="$HOME/Nucleus"
 
-#NUCLEUS DIRS
-NUCLEUS_DATA="$NUCLEUS/data"
-NUCLEUS_VENV="$NUCLEUS/venv"
-NUCLEUS_BIN="$NUCLEUS/bin"
-NUCLEUS_CACHE="$NUCLEUS/cache"
-
-#NUCLEUS DB
-NUCLEUS_DATABASE="NUCLEUS_DATABASE"
-
-#NUCLEUS FILES
-NUCLEUS_CONFIG="$NUCLEUS/nucleus.ini"
-
-#NUCLEUS HIDDEN FILES
-NUCLEUS_HISTORY="$NUCLEUS/.nucleus_history"
-NUCLEUS_LOGS="$NUCLEUS/.logs"
-MACHINE_LOGS="$NUCLEUS/.machine_logs"
-
-#NOTE: OK
-
 function make_nucleus () {
     if [ -d $NUCLEUS ]; then
         echo "Nucleus exists already"
