@@ -1,0 +1,7 @@
+#!/bin/bash
+
+alias battery=''
+alias cpu_data=''
+alias ioregtree=''
+alias macostools=''
+alias system_stats=''
