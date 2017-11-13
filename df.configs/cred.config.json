@@ -21,7 +21,7 @@
         "ubuntu_vm" : {
             "type" : "aws",
             "user" : "ubuntu",
-            "adress" : "ec2-18-195-65-231",
+            "adress" : "ec2-18-194-221-235",
             "pem_key" : "ubuntu-vm.pem"
         },
         "ial_rpi" : {
