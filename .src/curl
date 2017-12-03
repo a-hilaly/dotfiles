@@ -10,7 +10,7 @@ function jcurl () {
     echo "Not Implemented"
 }
 
-function gocurl () {
+function curlit () {
     # New curl to support fast JSON requests
     mode="$1"
     adress="$2"
