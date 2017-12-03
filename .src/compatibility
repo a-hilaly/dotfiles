@@ -5,7 +5,28 @@ function _sys () {
     uname
 }
 
+function is_darwin () {
+    system=$(_sys)
+    if [ "$system" = "Darwin" ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function is_linux () {
+    system=$(_sys)
+    if [ "$system" = "Darwin" ]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
 function macCompatibility () {
+    _is_darwin=$(is_darwin)
+    exs=$?
+    if [ $exs = 0 ]
     if [ "$uname" == "Darwin"]; then
         echo "OK"
         exit 0
