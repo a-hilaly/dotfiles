@@ -4,6 +4,13 @@
 <dict>
 	<key>build</key>
 	<real>912</real>
+	<key>license</key>
+	<dict>
+		<key>email</key>
+		<string>hilalyamine@gmail.com</string>
+		<key>serial</key>
+		<string>GAWQE-F9A32-TVE79-GWQKA-AHDJ7-NJBF6-9SGMR-7K8MR-A9KB9-8UXAZ-9U54V-EYPFR-D8BPD-UMTAP-6QM46-Q</string>
+	</dict>
 	<key>preferences</key>
 	<dict>
 		<key>Battery_DropdownOrderDisabled</key>
@@ -63,47 +70,58 @@
 		</array>
 		<key>CPU_AppFormat</key>
 		<integer>0</integer>
+		<key>CPU_CombineLogicalCores</key>
+		<integer>1</integer>
+		<key>CPU_DropdownOrder</key>
+		<string>cpu,gpu-processes,gpu,processes,load,uptime,buttons</string>
+		<key>CPU_DropdownOrderDisabled</key>
+		<string></string>
+		<key>CPU_Hotkey</key>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1v
+		ZGlmaWVyRmxhZ3MQCIACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2Vz
+		W01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXll
+		ZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDF
+		AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=
+		</data>
+		<key>CPU_MenubarCombineCores</key>
+		<integer>1</integer>
+		<key>CPU_MenubarGraphBreakdowns</key>
+		<integer>1</integer>
 		<key>CPU_MenubarGroupItems</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>CPU_MenubarMode</key>
 		<array>
 			<dict>
 				<key>key</key>
 				<string>100</string>
 				<key>uuid</key>
-				<string>16D09CFF-3D9D-4DB1-89A3-E29C086810D6</string>
+				<string>A4796301-723E-4A39-89DD-5343002BD538</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>0</string>
 				<key>uuid</key>
-				<string>8CB304A3-2B28-43AD-AC43-A8506321BA39</string>
-			</dict>
-			<dict>
-				<key>key</key>
-				<string>1</string>
-				<key>uuid</key>
-				<string>A811149A-BE39-42A8-B0F6-429CD6BBAFB4</string>
+				<string>5395D1D4-F111-4E91-880E-47CDE2355CA7</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>6</string>
 				<key>uuid</key>
-				<string>C439CCB3-49A1-45ED-A522-EE77FDAF843C</string>
+				<string>AB5F3017-6593-4FFE-AC90-C4CED81C080F</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>8</string>
 				<key>uuid</key>
-				<string>50275A16-1BE1-4895-96C9-4AD49738E59A</string>
+				<string>132CE115-5942-4BD6-8996-751A76975BE7</string>
 			</dict>
 			<dict>
-				<key>display</key>
-				<integer>0</integer>
 				<key>key</key>
 				<string>11</string>
 				<key>uuid</key>
-				<string>0744A225-0945-4E28-9B69-FE8836640FE2</string>
+				<string>423E97D4-0D39-4193-AD48-A533530578D9</string>
 			</dict>
 			<dict>
 				<key>display</key>
@@ -111,11 +129,48 @@
 				<key>key</key>
 				<string>9</string>
 				<key>uuid</key>
-				<string>5C417E90-520A-4437-977B-DE7A11A524DA</string>
+				<string>0EC88F30-F92A-4E32-8DEA-0C1C358B1775</string>
+			</dict>
+			<dict>
+				<key>display</key>
+				<integer>0</integer>
+				<key>key</key>
+				<string>10</string>
+				<key>uuid</key>
+				<string>35EBF39C-E8E6-4850-9986-7B268C388430</string>
 			</dict>
 		</array>
+		<key>CPU_MenubarSingleHistoryGraph</key>
+		<integer>0</integer>
 		<key>CPU_ProcessCount</key>
-		<integer>5</integer>
+		<integer>10</integer>
+		<key>CombinedMenubarDisplayMode</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>1</string>
+				<key>uuid</key>
+				<string>4C368858-DC6B-455F-A4CC-A8F797695A02</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>2</string>
+				<key>uuid</key>
+				<string>72FB2D7D-865D-4DB5-A90A-36CDA39C9E29</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>3</string>
+				<key>uuid</key>
+				<string>08C0367A-11B9-43DD-9291-A4E148D31AC4</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>4</string>
+				<key>uuid</key>
+				<string>0A1155E6-6C12-4505-A58B-09EAFF4FEE61</string>
+			</dict>
+		</array>
 		<key>Diagnostics_Enabled</key>
 		<false/>
 		<key>Disks_ActivityGraphMode</key>
@@ -124,6 +179,23 @@
 		<integer>0</integer>
 		<key>Disks_DropdownOrderDisabled</key>
 		<string>removable,unmounted</string>
+		<key>Disks_DropdownShowAllActivity</key>
+		<integer>0</integer>
+		<key>Disks_Hotkey</key>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1v
+		ZGlmaWVyRmxhZ3MQAoACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2Vz
+		W01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXll
+		ZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDF
+		AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=
+		</data>
+		<key>Disks_MenubarFontStyle</key>
+		<integer>1</integer>
+		<key>Disks_MenubarGraphOverallColor</key>
+		<string>0.02 0.51 1.00 1.00</string>
+		<key>Disks_MenubarGroupItems</key>
+		<integer>0</integer>
 		<key>Disks_MenubarItems</key>
 		<array>
 			<dict>
@@ -141,17 +213,23 @@
 				<key>key</key>
 				<string>100</string>
 				<key>uuid</key>
-				<string>603BC34C-D407-4FFF-BE8A-13FA0A4E0AF2</string>
+				<string>A592BC1F-F9F5-4F3F-91F9-7551A4F25C8E</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>0</string>
 				<key>uuid</key>
-				<string>93B84928-8639-4658-865F-55B525F0D8F6</string>
+				<string>612503C6-DD9A-4B3A-AE22-2DE26A0AC894</string>
 			</dict>
 		</array>
+		<key>Disks_MenubarPercentageSize</key>
+		<integer>10</integer>
+		<key>Disks_MenubarRWBold</key>
+		<integer>0</integer>
+		<key>Disks_MenubarRWFontStyle</key>
+		<integer>0</integer>
 		<key>Disks_ProcessCount</key>
-		<integer>5</integer>
+		<integer>10</integer>
 		<key>Disks_SeperateFusion</key>
 		<integer>0</integer>
 		<key>DropdownGraphBackground</key>
@@ -164,25 +242,56 @@
 		<integer>3</integer>
 		<key>FanControl_Enabled</key>
 		<true/>
+		<key>GPU_DropdownGraph</key>
+		<string>0.92 0.94 0.09 1.00</string>
+		<key>GPU_MenubarFontStyle</key>
+		<integer>1</integer>
 		<key>GPU_MenubarGraph</key>
-		<string>0.18 0.24 0.99 1.00</string>
+		<string>0.94 0.51 0.33 1.00</string>
+		<key>GPU_MenubarGraphWidth</key>
+		<real>29.660615921020508</real>
+		<key>GPU_MenubarTextSize</key>
+		<integer>11</integer>
+		<key>Memory_AppFormat</key>
+		<integer>0</integer>
+		<key>Memory_DisplayFormat</key>
+		<integer>1</integer>
+		<key>Memory_Hotkey</key>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1v
+		ZGlmaWVyRmxhZ3MQKYACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2Vz
+		W01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXll
+		ZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDF
+		AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=
+		</data>
+		<key>Memory_IgnoreInactive</key>
+		<integer>1</integer>
+		<key>Memory_MenubarGraphBreakdowns</key>
+		<integer>1</integer>
 		<key>Memory_MenubarMode</key>
 		<array>
 			<dict>
 				<key>key</key>
 				<string>100</string>
 				<key>uuid</key>
-				<string>59B5A773-F233-4493-9335-71A3D780AD35</string>
+				<string>B55AC13D-A709-4E70-B6F6-96E7DD39F7EF</string>
 			</dict>
 			<dict>
 				<key>key</key>
-				<string>6</string>
+				<string>9</string>
 				<key>uuid</key>
-				<string>D891D6DB-B71F-4A7A-8710-00077644380B</string>
+				<string>E4CAD7B1-F118-4986-A93D-3FE301E43148</string>
 			</dict>
 		</array>
 		<key>Memory_ProcessCount</key>
-		<integer>5</integer>
+		<integer>15</integer>
+		<key>Memory_UFBold</key>
+		<integer>1</integer>
+		<key>Memory_UFMenubarFontStyle</key>
+		<integer>0</integer>
+		<key>Memory_UFShowLabel</key>
+		<integer>0</integer>
 		<key>MenubarGraphOpacity</key>
 		<real>1</real>
 		<key>MenubarGraphOpacity-Dark</key>
@@ -197,37 +306,76 @@
 		<integer>1</integer>
 		<key>Migrated_6.0</key>
 		<true/>
+		<key>Network_AddressMode</key>
+		<integer>0</integer>
+		<key>Network_AppSort</key>
+		<integer>0</integer>
+		<key>Network_DataFormat</key>
+		<integer>1</integer>
+		<key>Network_DecimalLevel</key>
+		<integer>1</integer>
 		<key>Network_DotUpload</key>
 		<string>1.00 0.18 0.18 1.00</string>
+		<key>Network_DropdownOrderDisabled</key>
+		<string></string>
+		<key>Network_GraphMode</key>
+		<integer>1</integer>
+		<key>Network_GraphShowBackground</key>
+		<integer>0</integer>
+		<key>Network_GraphWidth</key>
+		<real>30.103172302246094</real>
+		<key>Network_Hotkey</key>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1v
+		ZGlmaWVyRmxhZ3MQLYACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2Vz
+		W01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXll
+		ZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDF
+		AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=
+		</data>
+		<key>Network_MenubarFontStyle</key>
+		<integer>0</integer>
 		<key>Network_MenubarMode</key>
 		<array>
 			<dict>
 				<key>key</key>
 				<string>0</string>
 				<key>uuid</key>
-				<string>432BFBA6-0877-4C95-82BC-379C5C7D8706</string>
+				<string>973F9287-D149-4048-96E5-4B2A2DA3FFE6</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>2</string>
+				<key>uuid</key>
+				<string>312B51BC-9AA4-4DF2-AA5E-E76E7A89A9B7</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>4</string>
 				<key>uuid</key>
-				<string>CC42AD1E-CC63-4CB3-9B65-80C80917C272</string>
+				<string>85D2DDEA-36B6-45AD-BFBE-A878EDCB2253</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>3</string>
 				<key>uuid</key>
-				<string>D2CAF321-43B4-448A-A9A1-87ECF7578DE2</string>
-			</dict>
-			<dict>
-				<key>key</key>
-				<string>5</string>
-				<key>uuid</key>
-				<string>2DC60299-CD52-4D90-915A-62859A789AF5</string>
+				<string>D3F0DED2-A1BC-42BF-93B6-E07821C859C0</string>
 			</dict>
 		</array>
+		<key>Network_MenubarUnitLevel</key>
+		<integer>1</integer>
+		<key>Network_ProcessCount</key>
+		<integer>10</integer>
 		<key>Network_StatusConnected</key>
-		<string>0.97 0.96 0.95 1.00</string>
+		<string>0.28 0.82 0.31 1.00</string>
+		<key>Network_TextBold</key>
+		<integer>0</integer>
+		<key>Network_TextDownloadColor</key>
+		<string>0.00 0.30 0.77 1.00</string>
+		<key>Network_TextUploadColor</key>
+		<string>1.00 0.00 0.04 1.00</string>
+		<key>Network_TextUploadShadowColor</key>
+		<string>1.00 0.99 0.96 0.50</string>
 		<key>Notifications-Enabled</key>
 		<true/>
 		<key>Notifications-Items</key>
@@ -238,11 +386,11 @@
 				<key>notification-type</key>
 				<string>1</string>
 				<key>rule-type</key>
-				<string>18</string>
+				<string>21</string>
 				<key>uuid</key>
 				<string>BED134CF-E396-4230-98EA-1723F2C4E993</string>
 				<key>value</key>
-				<string>978332400</string>
+				<string>978307200</string>
 			</dict>
 			<dict>
 				<key>enabled</key>
@@ -280,34 +428,125 @@
 				<key>value</key>
 				<string>10.00</string>
 			</dict>
+			<dict>
+				<key>duration</key>
+				<string>5.00</string>
+				<key>enabled</key>
+				<true/>
+				<key>notification-type</key>
+				<string>1</string>
+				<key>rule-type</key>
+				<string>0</string>
+				<key>uuid</key>
+				<string>7B80C3C9-9DBC-450B-BDB2-98FB077BF992</string>
+				<key>value</key>
+				<string>60.00</string>
+			</dict>
+			<dict>
+				<key>enabled</key>
+				<true/>
+				<key>notification-type</key>
+				<string>1</string>
+				<key>rule-type</key>
+				<string>4</string>
+				<key>uuid</key>
+				<string>717FF7C2-3D0C-4E0E-BE18-D352D29CC3E3</string>
+				<key>value</key>
+				<string>1000.00</string>
+			</dict>
+			<dict>
+				<key>enabled</key>
+				<true/>
+				<key>item-name</key>
+				<string>IAL Macintosh HD</string>
+				<key>item-uuid</key>
+				<string>A18401C4-E091-3C33-99A2-2C2F396E5817</string>
+				<key>notification-type</key>
+				<string>1</string>
+				<key>rule-type</key>
+				<string>5</string>
+				<key>uuid</key>
+				<string>AF9C434C-E80E-4CA4-B618-64C45AA8848D</string>
+				<key>value</key>
+				<string>50.00</string>
+			</dict>
+			<dict>
+				<key>duration</key>
+				<string>5.00</string>
+				<key>enabled</key>
+				<true/>
+				<key>item-name</key>
+				<string></string>
+				<key>item-uuid</key>
+				<string>__ANY__</string>
+				<key>notification-type</key>
+				<string>1</string>
+				<key>rule-type</key>
+				<string>11</string>
+				<key>uuid</key>
+				<string>58DBD43D-5B12-48B4-972D-97DAE8F3FC9E</string>
+				<key>value</key>
+				<real>75</real>
+			</dict>
+			<dict>
+				<key>duration</key>
+				<string>5.00</string>
+				<key>enabled</key>
+				<true/>
+				<key>notification-type</key>
+				<string>1</string>
+				<key>rule-type</key>
+				<string>0</string>
+				<key>uuid</key>
+				<string>B7A11844-7451-435B-BDBA-3C316AE4DCA6</string>
+				<key>value</key>
+				<string>90.00</string>
+			</dict>
 		</array>
+		<key>Sensor_DropdownGraph</key>
+		<string>0.34 0.35 0.99 1.00</string>
 		<key>Sensors-Limits-Updated</key>
 		<true/>
+		<key>Sensors_DropdownOrderDisabled</key>
+		<string></string>
+		<key>Sensors_Hotkey</key>
+		<data>
+		YnBsaXN0MDDUAQIDBAUGFhdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
+		VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OV0tleUNvZGVWJGNsYXNzXU1v
+		ZGlmaWVyRmxhZ3MQAYACEgASAADSEBESE1okY2xhc3NuYW1lWCRjbGFzc2Vz
+		W01BU1Nob3J0Y3V0ohQVW01BU1Nob3J0Y3V0WE5TT2JqZWN0XxAPTlNLZXll
+		ZEFyY2hpdmVy0RgZVHJvb3SAAQgRGiMtMjc7QUhQV2VnaW5zfoeTlqKrvcDF
+		AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAAAMc=
+		</data>
 		<key>Sensors_MenubarMode</key>
 		<array>
 			<dict>
 				<key>key</key>
 				<string>2</string>
 				<key>uuid</key>
-				<string>92637B00-9B30-41EC-A3A1-E8568BCD4084</string>
+				<string>40EC9A20-FE91-4BF2-BA01-43DD7B9EAA59</string>
 			</dict>
 			<dict>
 				<key>key</key>
 				<string>3</string>
 				<key>uuid</key>
-				<string>62109E2B-9C5A-4759-AAE8-5A43F6E419B9</string>
+				<string>27A9967D-C8E7-4358-9FD4-EDDA6380CC07</string>
 			</dict>
 		</array>
+		<key>Sensors_TemperatureMode</key>
+		<integer>0</integer>
 		<key>StatusItems-Order</key>
 		<array>
-			<integer>4</integer>
-			<integer>3</integer>
-			<integer>2</integer>
 			<integer>1</integer>
+			<integer>2</integer>
+			<integer>3</integer>
+			<integer>4</integer>
 			<integer>5</integer>
 		</array>
 		<key>Theme-SeperateStyles</key>
 		<true/>
+		<key>Time_DropdownCityLayout</key>
+		<integer>1</integer>
 		<key>Time_MenubarFormat</key>
 		<array>
 			<dict>
@@ -344,6 +583,8 @@
 				<string>291A3907-D793-4E55-825D-47880B7E78CA</string>
 			</dict>
 		</array>
+		<key>language</key>
+		<string>en</string>
 	</dict>
 	<key>version</key>
 	<real>6</real>
