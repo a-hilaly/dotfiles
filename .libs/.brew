@@ -116,5 +116,8 @@ brew install wifi-password
 brew install m-cli #SWESS ARMEEEE
 brew install collectd
 
+# formaters
+brew install tidy-html5
+
 # clean up out dated versions
 brew cleanup
