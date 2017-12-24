@@ -1,0 +1,9 @@
+apm install atom-beautify
+apm install command-palette
+apm install merge-conflicts
+apm install svg-preview
+apm install language-elixir
+apm install language-ini
+apm install language-ocaml
+apm install language-reason
+apm install language-swift
