@@ -1,0 +1,7 @@
+#!/bash/bin
+
+alias pysetup='sudo python3 setup.py install'
+alias py2setup='sudo python setup.py install'
+
+alias pytest='sudo python3 setup.py test'
+alias py2test='sudo python3 setup.py test'
