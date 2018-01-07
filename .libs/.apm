@@ -1,3 +1,5 @@
+#!/bash/bin
+
 apm install atom-beautify
 apm install command-palette
 apm install merge-conflicts
@@ -7,3 +9,6 @@ apm install language-ini
 apm install language-ocaml
 apm install language-reason
 apm install language-swift
+apm install atom-jinja
+apm install atom-beautify
+apm install Hydrogen
