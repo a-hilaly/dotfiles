@@ -5,8 +5,6 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 export DOTFILES="$HOME/Github/dotfiles"
 export DOTFILES_CONFIGURATIONS="$DOTFILES/df.config"
-export NUCLEUS="$HOME/Nucleus"
-
 
 function source_lib () {
     d="$1"
