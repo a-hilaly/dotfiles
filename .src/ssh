@@ -18,7 +18,7 @@ function aws_ssh () {
     user="$1"
     adress="$user@$2.eu-central-1.compute.amazonaws.com"
     pem_key_regex_dir="$3"
-    sudo ssh -i "$pem_key_regex_dir" "$adress"
+    ssh -i "$pem_key_regex_dir" "$adress"
 }
 
 function sshit () {
@@ -34,7 +34,7 @@ function sshit () {
         adress=$(extract_from_json $CRED_CONF "$_km.$machine.adress")
         pem_key=$(extract_from_json $CRED_CONF "$_km.$machine.pem_key")
         if [ "$_type" = "aws" ]; then
-            aws_ssh "$user" "$adress" "$DOTFILES_CONFIGURATIONS/.keys/$pem_key"
+            aws_ssh "$user" "$adress" "$HOME/$pem_key"
         elif [ "$_type" = "local" ]; then
             local_ssh $user $adress
         fi
