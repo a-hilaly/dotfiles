@@ -1,3 +1,5 @@
+#!/bin/usr/python
+
 import os
 import subprocess
 
@@ -11,6 +13,8 @@ def _cbtr(ln):
         if i:
             r += [cbts(i)]
     return r
+
+    
 
 def _spcc(cmd):
     c = cmd.split(' ')

@@ -90,6 +90,10 @@ brew install carthage
 # docker utils
 brew install docker
 brew install docker-machine
+brew install swig
+brew install nmap
+brew install awscli
+#brew install sfml
 
 # cmake
 brew install cmake
