@@ -1,14 +1,5 @@
 #!/bin/bash
 
-function _update_ps1() {
-    PS1="$(powerline-shell $?)"
-}
-
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
-
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
@@ -18,6 +9,7 @@ export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 export NUCLEUS="$HOME/Nucleus"
 export NUCLEUS_BIN="$NUCLEUS/bin"
 
+export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$NUCLEUS_BIN
 

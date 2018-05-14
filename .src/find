@@ -3,7 +3,6 @@
 function find () {
     opt="$1"
     f="$2"
-    dir="$3"
     if [ "$opt" = "--home" ] || [ "$opt" = "home" ]; then
         sudo find "$HOME" -name "$f"
     elif [ "$opt" = "--here" ] || [ "$opt" = "here" ]; then
