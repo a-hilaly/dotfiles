@@ -9,9 +9,9 @@ export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 export NUCLEUS="$HOME/Nucleus"
 export NUCLEUS_BIN="$NUCLEUS/bin"
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$NUCLEUS_BIN
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=/usr/local/sbin:$PATH
 
 
 function source_lib () {
