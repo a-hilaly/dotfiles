@@ -6,11 +6,13 @@ export LANG="en_US"
 export DOTFILES="$HOME/Github/dotfiles"
 export DOTFILES_CONFIGURATIONS="$DOTFILES/df.configs"
 export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
-export NUCLEUS="$HOME/Nucleus"
-export NUCLEUS_BIN="$NUCLEUS/bin"
+#export NUCLEUS="$HOME/Nucleus"
+#export NUCLEUS_BIN="$NUCLEUS/bin"
 
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/google-cloud-sdk/bin
 export PATH=/usr/local/sbin:$PATH
 
 
@@ -18,9 +20,8 @@ function source_lib () {
     for f in $DOTFILES/.src/*
     do
         if [ -f "$f" ]; then
-            echo "[INFO] ... Sourcing $f"
             source $f # . $f
-            echo "       ... OK "
+            echo "[INFO] ... Sourced file => $(basename $f)"
         fi
     done
 }
