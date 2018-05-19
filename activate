@@ -16,7 +16,7 @@ export GOPATH=~/go
 #export PATH="$PATH:$HOME/google-cloud-sdk/bin"
 
 function source_lib () {
-    for f in $DOTFILES/.src/*
+    for f in $DOTFILES/src/*
     do
         if [ -f "$f" ]; then
             source $f # . $f
