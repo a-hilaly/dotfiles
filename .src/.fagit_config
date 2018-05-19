@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# not implemented
-
-if [ -x "$(command -v fagit)" ]; then
-    alias get='fagit'
-fi

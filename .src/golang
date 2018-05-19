@@ -1,5 +1,0 @@
-#!/bin/bash
-
-alias Go='go run'
-alias Gog='go get -u'
-alias Gob='go build -o'
