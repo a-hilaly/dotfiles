@@ -137,3 +137,14 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+alias gogithub='cd $GOPATH/src/github.com'
+
+function gogo() {
+	if [ "$1" = "github" ]; then 
+		gogithub
+	elif [ "$1" = "me" ]; then
+		cd $GOPATH/src/github.com/a-hilaly
+	else 
+		cd $GOPATH/src/github.com/$1
+	fi
+}
