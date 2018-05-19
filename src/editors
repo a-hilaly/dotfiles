@@ -23,4 +23,16 @@ function goatom () {
     fi;
 }
 
+#vscode
+
+alias vs='code'
+alias vscode='code'
+
+function vsc () {
+    if [ "$1" = "" ]; then
+        code .
+    fi
+    code $@
+}
+
 $@

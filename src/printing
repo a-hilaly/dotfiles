@@ -10,13 +10,4 @@ function escape() {
 	fi;
 }
 
-
-function goecho () {
-    echo "";
-}
-
-function goprintf () {
-    printf "";
-}
-
 $@

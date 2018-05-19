@@ -10,7 +10,7 @@ function local_ssh () {
     user="$1"
     adress="$2"
     sentence="$user@$adress"
-    sudo ssh "$sentence"
+    ssh "$sentence"
 }
 
 function aws_ssh () {
@@ -34,12 +34,12 @@ function sshit () {
         adress=$(extract_from_json $CRED_CONF "$_km.$machine.adress")
         pem_key=$(extract_from_json $CRED_CONF "$_km.$machine.pem_key")
         if [ "$_type" = "aws" ]; then
-            aws_ssh "$user" "$adress" "$HOME/$pem_key"
+            aws_ssh "$user" "$adress" "$HOME/.ssh/$pem_key"
         elif [ "$_type" = "local" ]; then
             local_ssh $user $adress
         fi
     else
-        sudo ssh $@
+        ssh $@
     fi
 }
 

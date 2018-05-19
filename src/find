@@ -4,15 +4,15 @@ function find () {
     opt="$1"
     f="$2"
     if [ "$opt" = "--home" ] || [ "$opt" = "home" ]; then
-        sudo find "$HOME" -name "$f"
+        find "$HOME" -name "$f"
     elif [ "$opt" = "--here" ] || [ "$opt" = "here" ]; then
-        sudo find "$PWD" -name "$f"
+        find "$PWD" -name "$f"
     elif [ "$opt" = "--github" ] || [ "$opt" = "github" ]; then
-        sudo find "$HOME/Github" -name $f
+        find "$HOME/Github" -name $f
     elif [ "$opt" = "--all" ] || [ "$opt" = "all" ]; then
-        sudo find / -name "$f"
+        find / -name "$f"
     else
-        sudo find "$opt" -name "$f"
+        find "$opt" -name "$f"
     fi
 }
 

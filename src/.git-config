@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source $DOTFILES/.lib/.json
-
 
 function configure_git_credentials () {
     # Configure Git Credentials

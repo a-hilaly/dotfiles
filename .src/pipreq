@@ -1,4 +1,0 @@
-#!/bin/bash
-
-alias pipreq='sudo pip3 install -r req.txt'
-alias pip2req='sudo pip install -r req.txt'
