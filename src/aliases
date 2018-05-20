@@ -138,6 +138,8 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 alias gogithub='cd $GOPATH/src/github.com'
+alias github='$HOME/Github'
+alias home='$HOME'
 
 function gogo() {
 	if [ "$1" = "github" ]; then 
