@@ -137,8 +137,10 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+alias desktop='dt'
 alias gogithub='cd $GOPATH/src/github.com'
-alias github='$HOME/Github'
+alias gh='$HOME/Github'
+alias github='gh'
 alias home='$HOME'
 
 function gogo() {
