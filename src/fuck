@@ -1,5 +1,5 @@
 #!/bin/bash
 
-eval $(thefuck --alias FUCK)
+eval $(thefuck --alias fuck)
 
 $@

@@ -60,7 +60,7 @@ brew install gcc
 brew install jq
 
 # Protobuf
-brew install protobuff
+brew install protobuf
 
 # mac os cmd last versions
 brew install grep

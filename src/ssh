@@ -21,13 +21,20 @@ function aws_ssh () {
     ssh -i "$pem_key_regex_dir" "$adress"
 }
 
+function gcp_ssh () {
+    user="$1"
+    address="$2"
+    pem_key_regex_dir="$3"
+    ssh -i "$pem_key_regex_dir" "$adress"
+}
+
 function sshit () {
     opt="$1"
     if [ "$opt" = "--local" ]; then
         local_ssh "${@:2}"
     elif [ "$opt" = "--aws" ]; then
         aws_ssh "${@:2}"
-    elif [ "$opt" = "--known" ]; then
+    elif [ "$opt" = "--known" ] || [ "$opt" = "%" ] ; then
         machine="$2"
         _type=$(extract_from_json $CRED_CONF "$_km.$machine.type")
         user=$(extract_from_json $CRED_CONF "$_km.$machine.user")
@@ -37,10 +44,14 @@ function sshit () {
             aws_ssh "$user" "$adress" "$HOME/.ssh/$pem_key"
         elif [ "$_type" = "local" ]; then
             local_ssh $user $adress
+        elif [ "$_type" = "gcp" ]; then
+            gcp_ssh "$user" "$adress" "$HOME/.ssh/$pem_key"
         fi
     else
         ssh $@
     fi
 }
+
+alias sshh='sshit %'
 
 $@
