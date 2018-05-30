@@ -16,7 +16,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/google-cloud-sdk/bin"
 
-function source_lib () {
+function source_libraries () {
     for f in $DOTFILES/src/*
     do
         if [ -f "$f" ]; then
@@ -25,7 +25,7 @@ function source_lib () {
         fi
     done
 }
-source_lib
+source_libraries
 
 
 # The next line updates PATH for the Google Cloud SDK.

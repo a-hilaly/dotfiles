@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Print public SSH key to clipboard. Generate it if necessary
-
