@@ -1,7 +1,0 @@
-#!/bash/bin
-
-alias pysetup='python3 setup.py install'
-alias py2setup='python setup.py install'
-
-alias pytest='python3 setup.py test'
-alias py2test='python3 setup.py test'

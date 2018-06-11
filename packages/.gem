@@ -1,7 +1,0 @@
-#!/bin/bash
-
-gem update --system
-
-gem install iStats
-gem install jekyll
-gem install sinatra

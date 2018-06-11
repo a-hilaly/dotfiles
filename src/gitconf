@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-function configure_git_credentials () {
+function cgcreds () {
     # Configure Git Credentials
     username = $(extract_from_json $DL_CREDENTIALS .git.user)
     mail = $(extract_from_json $DL_CREDENTIALS .git.mail)

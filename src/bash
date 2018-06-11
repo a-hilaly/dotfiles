@@ -3,7 +3,7 @@
 alias old_bash='/bin/bash'
 alias bash='/usr/local/bin/bash'
 
-function change_default_bash () {
+function __chsh () {
     version="$1"
     path="$1"
     if [ "$version" =~ "4*" ] || [ "$version" = "new" ] ; then
