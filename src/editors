@@ -24,11 +24,7 @@ function goatom () {
 }
 
 #vscode
-
-alias vs='code'
-alias vscode='code'
-
-function vsc () {
+function vscode () {
     if [ "$1" = "" ]; then
         code .
     fi

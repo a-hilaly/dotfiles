@@ -1,0 +1,9 @@
+#!/bin/bash
+
+alias dk='docker'
+
+# switch to minikube docker
+alias mkd='eval $(minikube docker-env)'
+
+# switch to default docker
+alias unmkd='eval $(minikube docker-env -u)'

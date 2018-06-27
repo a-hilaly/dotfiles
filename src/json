@@ -18,5 +18,3 @@ function json() {
 		python -mjson.tool | pygmentize -l javascript;
 	fi;
 }
-
-$@
