@@ -1,0 +1,7 @@
+#!/bin/bash
+
+alias mk='minikube'
+alias mksvc='mk service'
+alias mkstart='mk start'
+alias mkstop='mk stop'
+alias mkdelete='mk delete'
