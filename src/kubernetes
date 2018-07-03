@@ -1,12 +1,8 @@
 #!/bin/bash
 
-alias mk='minikube'
-alias mkls='mk service list'
-
 alias k='kubectl'
 alias kpod='kubectl get pods'
 alias kdep='kubectl get deployments'
 alias ksvc='kubectl get svc'
 alias kcreate='kubectl create -f'
 alias kdelete='kubectl delete -f'
-
