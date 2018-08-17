@@ -123,5 +123,7 @@ brew install collectd
 # formaters
 brew install tidy-html5
 
+brew install gpg
+
 # clean up out dated versions
 brew cleanup
