@@ -139,6 +139,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 alias desktop='dt'
 alias gh='$HOME/Github'
+alias gitam='git commit -am'
 
 function gogo() {
 	if [ "$1" = "gh" ]; then 
