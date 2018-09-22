@@ -53,5 +53,6 @@ function sshit () {
 }
 
 alias sshh='sshit %'
+alias ssh='sshit'
 
 $@
