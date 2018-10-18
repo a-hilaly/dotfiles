@@ -154,3 +154,5 @@ function gogo() {
 		cd $GOPATH/src/github.com/$1
 	fi
 }
+
+alias home='cd $HOME'
