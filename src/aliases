@@ -148,6 +148,8 @@ function gogo() {
 		cd $GOPATH/src/github.com/a-hilaly
 	elif [ "$1" = "kube" ]; then
 		cd $GOPATH/src/github.com/kubernetes
+	elif [ "$1" = "sii" ]; then
+		cd $GOPATH/src/github.com/siisxb
 	elif [ "$1" = "kubei" ]; then
 		cd $GOPATH/src/github.com/kubernetes-incubator
 	else 

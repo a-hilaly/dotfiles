@@ -1,6 +1,5 @@
-install:
-	@echo installing dotfiles (github.com/a-hilaly/dotfiles)
-	cat activate > $(HOME)/.bashrc
+DOTFILES_PATH="~/Github/dotfiles"
 
-uninstall:
-	@echo uninstalling dotfiles (github.com/a-hilaly/dotfiles)
+install:
+	@echo installing dotfiles 
+	echo "source $(DOTFILES_PATH)/activate" >> ~/.bash_profile

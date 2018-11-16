@@ -49,7 +49,6 @@ brew install openssh
 brew install screen
 brew install homebrew/php/php56 --with-gmp
 
-
 # dd
 brew install ddrescue
 
@@ -122,7 +121,6 @@ brew install collectd
 
 # formaters
 brew install tidy-html5
-
 brew install gpg
 
 # clean up out dated versions

@@ -24,3 +24,7 @@ function cgcreds () {
     fi
 
 }
+
+function gitlog () {
+    
+}
