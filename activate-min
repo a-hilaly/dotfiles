@@ -34,7 +34,6 @@ source_libraries
 
 echo "\n[INFO] ... Loading done. (Exit status: $?)"
 
-
 if [ "$EUID" -eq 0 ]; then
     echo "WTFFFF ????"
 fi

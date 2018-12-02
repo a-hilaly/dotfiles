@@ -26,5 +26,19 @@ function cgcreds () {
 }
 
 function gitlog () {
-    
+    service="$1"
+    if [ "$service" = "github" ]; then
+
+    fi
+    if [ "$service" = "gitlab" ]; then
+
+    fi
+    if [ "$service" = "gitlab.sii" ]; then
+
+    fi
+    if [ "$service" = "git.medtune" ]; then 
+
+    else
+        echo "unknown git service: $service"
+    fi
 }

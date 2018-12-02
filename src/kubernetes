@@ -6,3 +6,11 @@ alias kdep='kubectl get deployments'
 alias ksvc='kubectl get svc'
 alias kcreate='kubectl create -f'
 alias kdelete='kubectl delete -f'
+
+function kns () {
+
+}
+
+function kset () {
+    
+}
