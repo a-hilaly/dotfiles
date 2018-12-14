@@ -137,24 +137,8 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# Marsian aliases
 alias desktop='dt'
 alias gh='$HOME/Github'
-alias gitam='git commit -am'
-
-function gogo() {
-	if [ "$1" = "gh" ]; then 
-		cd $GOPATH/src/github.com
-	elif [ "$1" = "me" ]; then
-		cd $GOPATH/src/github.com/a-hilaly
-	elif [ "$1" = "kube" ]; then
-		cd $GOPATH/src/github.com/kubernetes
-	elif [ "$1" = "sii" ]; then
-		cd $GOPATH/src/github.com/siisxb
-	elif [ "$1" = "kubei" ]; then
-		cd $GOPATH/src/github.com/kubernetes-incubator
-	else 
-		cd $GOPATH/src/github.com/$1
-	fi
-}
-
 alias home='cd $HOME'
+alias gitam='git commit -am'

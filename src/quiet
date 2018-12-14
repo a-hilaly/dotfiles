@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function quiet () {
+    if [ -f "$DOTFILES/.quiet" ]; then 
+        rm $DOTFILES/.quiet
+        echo "quiet=false"
+    else
+        echo "/!\ auto generated. DO NOT EDIT" > $DOTFILES/.quiet
+        echo "quiet=true"
+    fi
+
+}
