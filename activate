@@ -12,6 +12,7 @@ export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 #export NUCLEUS_BIN="$NUCLEUS/bin"
 
 export GOPATH=~/go
+export GO111MODULE=on
 export GOBIN=$GOPATH/bin
 #export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:$GOBIN"
