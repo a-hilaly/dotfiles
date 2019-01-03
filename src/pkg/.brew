@@ -22,14 +22,14 @@ brew install moreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
-
 brew install libtool
 
+# sed
 brew install gnu-sed --with-default-names
 
 # Install bash
 brew install bash
-#brew install bash-completion2
+brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
@@ -49,7 +49,7 @@ brew install openssh
 brew install screen
 brew install homebrew/php/php56 --with-gmp
 
-# dd
+# ddrescue
 brew install ddrescue
 
 # gcc
@@ -71,16 +71,16 @@ brew install golang
 brew install python3
 brew install ocaml
 brew install lua
-#brew install python
+brew install python
 brew install ruby
 brew install node
 brew install ghc
 brew install clisp
-#brew install elixir
-#brew install erlang
-#brew install autoconf
-#brew install julia
-#brew install lisp
+brew install elixir
+brew install erlang
+brew install autoconf
+brew install julia
+brew install lisp
 
 brew install nvm
 brew install rvm
@@ -92,27 +92,23 @@ brew install docker-machine
 brew install swig
 brew install nmap
 brew install awscli
-#brew install sfml
+brew install sfml
 
 # cmake
 brew install cmake
 
 # databases
-#brew install memcached
 #brew install mongodb
-brew install mysql
+#brew install mysql
 #brew install postgresql
 #brew install postgis
-brew install redis
+#brew install redis
 #brew install sqlite
 
 #apache
 
 # brew install tomcat
 # brew install httpd
-
-# others
-#brew install spotify
 
 brew install tmux-mem-cpu-load
 brew install wifi-password
@@ -122,6 +118,14 @@ brew install collectd
 # formaters
 brew install tidy-html5
 brew install gpg
+
+brew install rust
+brew install kubernetes-cli
+brew install kubernetes-helm
+brew install kubectx
+brew install kompose
+brew install hub
+brew install numpy
 
 # clean up out dated versions
 brew cleanup

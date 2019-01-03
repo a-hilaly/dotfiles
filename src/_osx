@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export OSX_SCRIPTS=$DOTFILES/src/.osx/.smc
+
+alias battery='python3 $OSX_SCRIPTS/battery.py'
+alias cpu-data='python3 $OSX_SCRIPTS/cpu_data.py'
+alias device-tree='python3 $OSX_SCRIPTS/device_tree.py'
+alias tools='python3 $OSX_SCRIPTS/list_tools.py'
