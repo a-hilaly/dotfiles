@@ -3,3 +3,5 @@ venv
 *.pem
 df.configs/cred.*
 .quiet
+Vagrantfile
+.vagrant

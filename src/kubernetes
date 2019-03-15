@@ -2,15 +2,15 @@
 
 alias k='kubectl'
 alias kpod='kubectl get pods'
+alias kpods='kubectl get pods --all-namespaces'
 alias kdep='kubectl get deployments'
+alias kdeps='kubectl get deployments --all-namespaces'
 alias ksvc='kubectl get svc'
+alias ksvcs='kubectl get svc --all-namespaces'
 alias kcreate='kubectl create -f'
 alias kdelete='kubectl delete -f'
+alias kns='kubectl get ns'
 
-function kns () {
-
-}
-
-function kset () {
-    
+function knss () {
+    kubectl config set-context $(kubectl config current-context) --namespace=$1
 }
