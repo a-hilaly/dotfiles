@@ -1,4 +1,4 @@
-DOTFILES_PATH="~/Github/dotfiles"
+DOTFILES_PATH="~/source/github.com/a-hilaly/dotfiles"
 
 install:
 	@echo installing dotfiles - all

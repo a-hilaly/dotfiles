@@ -1,21 +1,24 @@
 #!/bin/bash
 
+export GOGOBASE=~/source
 
 function gogo() {
 	if [ "$1" = "gh" ]; then 
-		cd $GOPATH/src/github.com
+		cd $GOGOBASE/github.com
 	elif [ "$1" = "me" ]; then
-		cd $GOPATH/src/github.com/a-hilaly
+		cd $GOGOBASE/github.com/a-hilaly
+	elif [ "$1" = "dh" ]; then
+		cd $GOGOBASE/github.com/destructhub
 	elif [ "$1" = "kube" ]; then
-		cd $GOPATH/src/github.com/kubernetes
+		cd $GOGOBASE/github.com
 	elif [ "$1" = "sii" ]; then
-		cd $GOPATH/src/github.com/siisxb
+		cd $GOGOBASE/github.com/siisxb
 	elif [ "$1" = "supbank" ];then
-		cd $GOPATH/src/gitlab.com/supbank
+		cd $GOGOBASE/gitlab.com/supbank
 	elif [ "$1" = "kubei" ]; then
-		cd $GOPATH/src/github.com/kubernetes-incubator
+		cd $GOGOBASE/github.com/kubernetes-incubator
 	else
-		cd $GOPATH/src/github.com/$1
+		cd $GOGOBASE/github.com/$1
 	fi
 }
 
