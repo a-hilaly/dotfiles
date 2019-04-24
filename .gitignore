@@ -1,7 +1,7 @@
 venv
 .keys/*
 *.pem
-df.configs/cred.*
+etc/cred.*
 .quiet
 Vagrantfile
 .vagrant
