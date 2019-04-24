@@ -5,7 +5,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 # Export GPG tty
 export GPG_TTY=$(tty)
-export DOTFILES_CONFIGURATIONS="$DOTFILES/df.configs"
+export DOTFILES_CONFIGURATIONS="$DOTFILES/etc"
 export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 
 export GOPATH=~/go

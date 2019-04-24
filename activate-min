@@ -6,7 +6,7 @@ export LANG="en_US"
 # Export GPG tty
 # Export GPG_TTY=$(tty)
 # Export DOTFILES="$HOME/Github/dotfiles"
-# export DOTFILES_CONFIGURATIONS="$DOTFILES/df.configs"
+# export DOTFILES_CONFIGURATIONS="$DOTFILES/etc"
 # export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 # export NUCLEUS="$HOME/Nucleus"
 # export NUCLEUS_BIN="$NUCLEUS/bin"
