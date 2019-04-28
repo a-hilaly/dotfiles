@@ -1,10 +1,15 @@
 #!/bin/bash
 
 export GOGOBASE=~/source
+export GITBUG_DEV=/Users/amine/go/src/github.com/MichaelMure/git-bug
 
 function gogo() {
 	if [ "$1" = "gh" ]; then 
 		cd $GOGOBASE/github.com
+	elif [ "$1" = "df" ] || [ "$1" = "dotfiles" ] ; then
+		cd $GOGOBASE/github.com/a-hilaly/dotfiles
+	elif [ "$1" = "git-bug" ] || [ "$1" = "bug" ] ; then
+		cd $GITBUG_DEV
 	elif [ "$1" = "me" ]; then
 		cd $GOGOBASE/github.com/a-hilaly
 	elif [ "$1" = "dh" ]; then
