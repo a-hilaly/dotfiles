@@ -6,5 +6,4 @@ If you want to give these dotfiles a try, you should review the code, and remove
 
 #### Warning
 
-Use at your own risk!
-
+Use it at your own risk !
