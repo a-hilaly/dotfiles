@@ -1,0 +1,10 @@
+# an ipv6 cluster
+kind: Cluster
+apiVersion: kind.sigs.k8s.io/v1alpha3
+networking:
+  ipFamily: ipv6
+nodes:
+# the control plane node
+- role: control-plane
+- role: worker
+- role: worker
