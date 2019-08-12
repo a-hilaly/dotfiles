@@ -122,10 +122,18 @@ brew install gpg
 brew install rust
 brew install kubernetes-cli
 brew install kubernetes-helm
+brew install terraform
+brew install bat
+brew install eksctl
+brew install vegeta
+brew install lazydocker
+brew install googler
 brew install kubectx
 brew install kompose
 brew install hub
 brew install numpy
+
+# brew install maven
 
 # clean up out dated versions
 brew cleanup
