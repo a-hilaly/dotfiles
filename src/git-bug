@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source $GOPATH/src/github.com/MichaelMure/git-bug/misc/zsh_completion/git-bug

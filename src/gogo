@@ -14,6 +14,10 @@ function gogo() {
 		cd $GITBUG_DEV
 	elif [ "$1" = "me" ]; then
 		cd $GOGOBASE/github.com/a-hilaly
+	elif [ "$1" = "vmware" ]; then
+		cd $GOPATH/src/github.com/vmware
+	elif [ "$1" = "weaveworks" ]; then
+		cd $GOPATH/src/github.com/weaveworks
 	elif [ "$1" = "mdapi" ]; then
 		cd $GOPATH/src/github.com/a-hilaly/medtune-api
 	elif [ "$1" = "dh" ]; then
