@@ -118,6 +118,7 @@ brew install collectd
 # formaters
 brew install tidy-html5
 brew install gpg
+brew install gettext
 
 brew install rust
 brew install kubernetes-cli
