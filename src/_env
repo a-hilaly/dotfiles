@@ -7,7 +7,7 @@ export DOTFILES_CONFIGURATIONS="$DOTFILES/etc"
 export CRED_CONF="$DOTFILES_CONFIGURATIONS/cred.config.json"
 
 export GOPATH=~/go
-export GO111MODULE=auto
+export GO111MODULE=on
 export GOBIN=$GOPATH/bin
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$PATH:$GOBIN"
