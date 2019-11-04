@@ -26,6 +26,8 @@ function gogo() {
 		cd $GOGOBASE/gitlab.com/supbank
 	elif [ "$1" = "kubei" ]; then
 		cd $GOGOBASE/github.com/kubernetes-incubator
+	elif [ "$1" = "csi" ]; then
+		cd $GOGOBASE/github.com/kubernetes-csi
 	else
 		cd $GOGOBASE/github.com/$1
 	fi
