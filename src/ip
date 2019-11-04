@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+alias myip='curl ifconfig.me'
+
