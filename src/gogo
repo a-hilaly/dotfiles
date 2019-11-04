@@ -6,8 +6,6 @@ export GITBUG_DEV=/Users/amine/go/src/github.com/MichaelMure/git-bug
 function gogo() {
 	if [ "$1" = "gh" ]; then 
 		cd $GOGOBASE/github.com
-	elif [ "$1" = "talium" ]; then
-		cd $GOGOBASE/gitlab.com/talium
 	elif [ "$1" = "df" ] || [ "$1" = "dotfiles" ] ; then
 		cd $GOGOBASE/github.com/a-hilaly/dotfiles
 	elif [ "$1" = "git-bug" ] || [ "$1" = "bug" ] ; then
@@ -24,8 +22,6 @@ function gogo() {
 		cd $GOGOBASE/github.com/destructhub
 	elif [ "$1" = "kube" ]; then
 		cd $GOGOBASE/github.com
-	elif [ "$1" = "sii" ]; then
-		cd $GOGOBASE/github.com/siisxb
 	elif [ "$1" = "supbank" ];then
 		cd $GOGOBASE/gitlab.com/supbank
 	elif [ "$1" = "kubei" ]; then
