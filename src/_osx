@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 export OSX_SCRIPTS=$DOTFILES/src/.osx/.smc
 
