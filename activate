@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
-if [ -f $DOTFILES/.quiet ]; then 
+export DOTFILES=$DOTFILES_PATH
+
+
+if [ -f $DOTFILES_PATH/.quiet ]; then 
     export QUIET=true
 else
     export QUIET=false
@@ -11,7 +14,7 @@ if [ "$QUIET" = "true" ]; then
 fi
 
 function source_libraries () {
-    for f in $DOTFILES/src/*
+    for f in $DOTFILES_PATH/src/*
     do
         if [ -f "$f" ]; then
             source $f # . $f
