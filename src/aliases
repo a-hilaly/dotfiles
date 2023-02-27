@@ -140,7 +140,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Marsian aliases
 alias desktop='dt'
-alias gh='$HOME/Github'
 alias home='cd $HOME'
 alias gitam='git commit -am'
 alias dc='docker-compose'

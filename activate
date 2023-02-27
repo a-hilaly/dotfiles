@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 export DOTFILES=$DOTFILES_PATH
-
+export GOPROXY=direct
 
 if [ -f $DOTFILES_PATH/.quiet ]; then 
     export QUIET=true

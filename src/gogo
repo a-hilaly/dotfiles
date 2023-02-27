@@ -1,29 +1,26 @@
 #!/bin/bash
 
 export GOGOBASE=~/source
-export GITBUG_DEV=/Users/amine/go/src/github.com/MichaelMure/git-bug
 
 function gogo() {
 	if [ "$1" = "gh" ]; then 
 		cd $GOGOBASE/github.com
 	elif [ "$1" = "df" ] || [ "$1" = "dotfiles" ] ; then
 		cd $GOGOBASE/github.com/a-hilaly/dotfiles
-	elif [ "$1" = "git-bug" ] || [ "$1" = "bug" ] ; then
-		cd $GITBUG_DEV
+	elif [ "$1" = "aws" ] ; then
+		cd $GOGOBASE/github.com/aws
+	elif [ "$1" = "ack" ]; then
+		cd $GOGOBASE/github.com/aws-controllers-k8s
 	elif [ "$1" = "me" ]; then
 		cd $GOGOBASE/github.com/a-hilaly
 	elif [ "$1" = "vmware" ]; then
 		cd $GOPATH/src/github.com/vmware
 	elif [ "$1" = "weaveworks" ]; then
 		cd $GOPATH/src/github.com/weaveworks
-	elif [ "$1" = "mdapi" ]; then
-		cd $GOPATH/src/github.com/a-hilaly/medtune-api
-	elif [ "$1" = "dh" ]; then
-		cd $GOGOBASE/github.com/destructhub
-	elif [ "$1" = "kube" ]; then
-		cd $GOGOBASE/github.com
-	elif [ "$1" = "supbank" ];then
-		cd $GOGOBASE/gitlab.com/supbank
+	elif [ "$1" = "kube" || "$1" = "k8s" || "$1" = "k"]; then
+		cd $GOGOBASE/github.com/kubernetes
+	elif [ "$1" = "k/k" ]; then
+		cd $GOGOBASE/github.com/kubernetes/kubernetes
 	elif [ "$1" = "kubei" ]; then
 		cd $GOGOBASE/github.com/kubernetes-incubator
 	elif [ "$1" = "csi" ]; then
