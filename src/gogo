@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GOGOBASE=~/source
+export GOGOBASE=$HOME/source
 
 function gogo() {
 	if [ "$1" = "gh" ]; then 
@@ -9,6 +9,10 @@ function gogo() {
 		cd $GOGOBASE/github.com/a-hilaly/dotfiles
 	elif [ "$1" = "aws" ] ; then
 		cd $GOGOBASE/github.com/aws
+	elif [ "$1" = "awslabs" ] ; then
+		cd $GOGOBASE/github.com/awslabs
+	elif [ "$1" = "kro" ] ; then
+		cd $GOGOBASE/github.com/awslabs/kro	
 	elif [ "$1" = "ack" ]; then
 		cd $GOGOBASE/github.com/aws-controllers-k8s
 	elif [ "$1" = "me" ]; then
@@ -17,7 +21,9 @@ function gogo() {
 		cd $GOPATH/src/github.com/vmware
 	elif [ "$1" = "weaveworks" ]; then
 		cd $GOPATH/src/github.com/weaveworks
-	elif [ "$1" = "kube" || "$1" = "k8s" || "$1" = "k"]; then
+	elif [ "$1" = "ks" ] || [ "$1" = "k-sigs" ] || [ "$1" = "sigs" ]; then
+		cd $GOGOBASE/github.com/kubernetes-sigs
+	elif [ "$1" = "kube" ] || [ "$1" = "k8s" ] || [ "$1" = "k" ]; then
 		cd $GOGOBASE/github.com/kubernetes
 	elif [ "$1" = "k/k" ]; then
 		cd $GOGOBASE/github.com/kubernetes/kubernetes
@@ -26,7 +32,7 @@ function gogo() {
 	elif [ "$1" = "csi" ]; then
 		cd $GOGOBASE/github.com/kubernetes-csi
 	else
-		cd $GOGOBASE/github.com/$1
+		cd "$GOGOBASE/github.com/$1"
 	fi
 }
 
