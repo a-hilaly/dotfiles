@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+alias laptalk="make -C /Users/aminehilaly/source/github.com/a-hilaly/laptalk run key=shift_r config=my-config.yaml"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -143,3 +145,4 @@ alias desktop='dt'
 alias home='cd $HOME'
 alias gitam='git commit -am'
 alias dc='docker-compose'
+alias cat=bat

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-KIND=$DOTFILES/etc/kind-default.yml
-KIND_HA=$DOTFILES/etc/kind-ha.yml
-KIND_IPV6=$DOTFILES/etc/kind-ipv6.yml
-
 alias kd='kind'
 alias kcc='kind create cluster'
 alias kdc='kind delete cluster'
